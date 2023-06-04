@@ -93,6 +93,7 @@ export default function Home() {
     let timer = 0;
 
     if (turn == 0) {
+      setImage(null);
       let interval = setInterval(() => {
         if (timer == 20) {
           clearInterval(interval);
@@ -103,7 +104,7 @@ export default function Home() {
           return;
         }
         timer++;
-        setImage(images[start]);
+        //setImage(images[start]);
         if (start == 2) start = 0;
         else start++;
       }, 100);
@@ -147,8 +148,10 @@ export default function Home() {
                 <img src="/rock.png" alt="" />
               ) : image == "paper" ? (
                 <img src="/paper.png" alt="" />
-              ) : (
+              ) : image == "scissors" ? (
                 <img src="/scissor.png" alt="" />
+              ) : (
+                <img src="/7o86qd.gif" className="w-12" alt="" />
               )}
             </button>
           </div>

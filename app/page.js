@@ -14,16 +14,16 @@ export default function Home() {
         </button>
       </div>
       <div className="flex mt-2 items-center justify-center space-x-6">
-        <button className="h-24 w-24 bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-200/50">
+        <button className="h-24 w-24 bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4405/4405457.png"
+            src="https://cdn-icons-png.flaticon.com/512/7083/7083532.png"
             alt=""
             className="h-10"
           />
         </button>
-        <button className="h-24 w-24 bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-200/50">
+        <button className="h-24 w-24 bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all">
           <img
-            src="https://cdn-icons-png.flaticon.com/512/4405/4405457.png"
+            src="https://cdn-icons-png.flaticon.com/512/3153/3153026.png"
             alt=""
             className="h-10"
           />

@@ -84,6 +84,7 @@ export default function Home() {
       });
       setSelected(null);
       setTurn(1);
+      setImage(null);
     }, 2500);
   };
 

@@ -87,7 +87,7 @@ export default function Home() {
   }, [selected]);
 
   return (
-    <main className="fixed flex flex-col justify-end inset-0 h-full w-full bg-gradient-to-b from-yellow-100/80 to-transparent pb-12">
+    <main className="fixed flex flex-col justify-center inset-0 h-full w-full bg-gradient-to-b from-yellow-100/80 to-transparent pb-12">
       <div className="mb-28">
         <div>
           <div className="mb-8">

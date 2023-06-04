@@ -84,7 +84,7 @@ export default function Home() {
       });
       setSelected(null);
       setTurn(1);
-    }, 1500);
+    }, 2500);
   };
 
   useEffect(() => {
@@ -143,17 +143,13 @@ export default function Home() {
                   : "border-transparent"
               } `}
             >
-              <img
-                src={
-                  image == "rock"
-                    ? "/rock.png"
-                    : image == "paper"
-                    ? "/paper.png"
-                    : "/scissor.png"
-                }
-                alt=""
-                className="h-10"
-              />
+              {image == "rock" ? (
+                <img src="/rock.png" alt="" />
+              ) : image == "paper" ? (
+                <img src="/paper.png" alt="" />
+              ) : (
+                <img src="/scissor.png" alt="" />
+              )}
             </button>
           </div>
         </div>

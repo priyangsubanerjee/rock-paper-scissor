@@ -144,19 +144,13 @@ export default function Home() {
                   : "border-transparent"
               } `}
             >
-              <img
-                className="h-10"
-                src={
-                  image == "rock"
-                    ? "/rock.png"
-                    : image == "paper"
-                    ? "/paper.png"
-                    : image == "scissors"
-                    ? "/scissor.png"
-                    : "https://1investing.in/wp-content/uploads/2020/04/how-to-write-a-technical-white-paper-in-6-steps_2.png"
-                }
-                alt=""
-              />
+              {image == "rock" ? (
+                <img className="h-12" src="/rock.png" alt="" />
+              ) : image == "paper" ? (
+                <img className="h-12" src="/paper.png" alt="" />
+              ) : image == "scissors" ? (
+                <img className="h-12" src="/scissor.png" alt="" />
+              ) : null}
             </button>
           </div>
         </div>

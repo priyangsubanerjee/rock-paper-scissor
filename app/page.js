@@ -152,8 +152,8 @@ export default function Home() {
                     : image == "paper"
                     ? "/paper.png"
                     : image == "scissors"
-                    ? "/scissors.png"
-                    : "https://www.trafigura.com/media/1670/footer-bg.png"
+                    ? "/scissor.png"
+                    : "https://1investing.in/wp-content/uploads/2020/04/how-to-write-a-technical-white-paper-in-6-steps_2.png"
                 }
                 alt=""
               />

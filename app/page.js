@@ -89,6 +89,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    setImage(null);
     let images = ["rock", "paper", "scissors"];
     let start = 0;
     let timer = 0;
@@ -201,7 +202,9 @@ export default function Home() {
         </button>
         <button
           disabled={selected != "scissors" && selected != null}
-          onClick={() => setSelected("scissors")}
+          onClick={() => {
+            setSelected("scissors");
+          }}
           className={`h-24 w-24 border-2 disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100 
            ${
              state.player == 1 && selected == "scissors"

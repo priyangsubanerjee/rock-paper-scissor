@@ -86,7 +86,7 @@ export default function Home() {
       setSelected(null);
       setTurn(1);
       setImage(null);
-    }, 2500);
+    }, 1500);
   };
 
   useEffect(() => {
@@ -132,7 +132,7 @@ export default function Home() {
             {turn == 0 ? "Computers" : "Your"} turn
           </h1>
           <p className="font-jost text-center text-zinc-600 mt-4">
-            `` You can select in the next turn.
+            {turn == 0 ? "Computer is choosing..." : "Choose your option"}
           </p>
           <div className="mt-10 flex justify-center">
             <button

@@ -28,6 +28,7 @@ export default function Home() {
           player: null,
           computer: null,
         });
+        setImage(null);
         setSelected(null);
         setTurn(1);
       }, 1000);

@@ -28,7 +28,6 @@ export default function Home() {
           player: null,
           computer: null,
         });
-        setIsDraw(false);
         setSelected(null);
         setTurn(1);
       }, 1000);
@@ -83,7 +82,6 @@ export default function Home() {
         player: null,
         computer: null,
       });
-      setPrimaryWinning(null);
       setSelected(null);
       setTurn(1);
     }, 1500);

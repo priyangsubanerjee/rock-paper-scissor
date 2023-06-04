@@ -10,6 +10,7 @@ export default function Home() {
   const [image, setImage] = useState("rock");
   const [myscore, setMyScore] = useState(0);
   const [compscore, setCompScore] = useState(0);
+  const [primaryWinning, setPrimaryWinning] = useState(null); // 0 = computer, 1 = player
 
   const decide = (computer) => {
     if (computer == selected) {
@@ -19,42 +20,30 @@ export default function Home() {
       }, 1000);
       return;
     } else if (computer == "rock" && selected == "paper") {
+      setPrimaryWinning(1);
       setMyScore(myscore + 1);
-      setTimeout(() => {
-        setSelected(null);
-        setTurn(1);
-      }, 1000);
     } else if (computer == "rock" && selected == "scissors") {
+      setPrimaryWinning(0);
       setCompScore(compscore + 1);
-      setTimeout(() => {
-        setSelected(null);
-        setTurn(1);
-      }, 1000);
     } else if (computer == "paper" && selected == "rock") {
+      setPrimaryWinning(0);
       setCompScore(compscore + 1);
-      setTimeout(() => {
-        setSelected(null);
-        setTurn(1);
-      }, 1000);
     } else if (computer == "paper" && selected == "scissors") {
+      setPrimaryWinning(1);
       setMyScore(myscore + 1);
-      setTimeout(() => {
-        setSelected(null);
-        setTurn(1);
-      }, 1000);
     } else if (computer == "scissors" && selected == "rock") {
+      setPrimaryWinning(1);
       setMyScore(myscore + 1);
-      setTimeout(() => {
-        setSelected(null);
-        setTurn(1);
-      }, 1000);
     } else if (computer == "scissors" && selected == "paper") {
+      setPrimaryWinning(0);
       setCompScore(compscore + 1);
-      setTimeout(() => {
-        setSelected(null);
-        setTurn(1);
-      }, 1000);
     }
+
+    setTimeout(() => {
+      setPrimaryWinning(null);
+      setSelected(null);
+      setTurn(1);
+    }, 1000);
   };
 
   useEffect(() => {
@@ -105,7 +94,9 @@ export default function Home() {
             <button
               disabled={turn == 1}
               onClick={() => setSelected("rock")}
-              className="h-24 w-24 disabled:opacity-0 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100"
+              className={`h-24 w-24 border-2  disabled:opacity-0 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100 ${
+                primaryWinning == 0 ? "border-green-500" : "border-transparent"
+              }`}
             >
               <img
                 src={
@@ -126,7 +117,11 @@ export default function Home() {
         <button
           disabled={selected != "rock" && selected != null}
           onClick={() => setSelected("rock")}
-          className="h-24 w-24 disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100"
+          className={`h-24 w-24 border-2  disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100 ${
+            primaryWinning == 1 && selected == "rock"
+              ? "border-green-500"
+              : "border-transparent"
+          }`}
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/4405/4405457.png"
@@ -141,7 +136,11 @@ export default function Home() {
           onClick={() => {
             setSelected("paper");
           }}
-          className="h-24 w-24 disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100"
+          className={`h-24 w-24 border-2  disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100 ${
+            primaryWinning == 1 && selected == "paper"
+              ? "border-green-500"
+              : "border-transparent"
+          }`}
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/7083/7083532.png"
@@ -152,7 +151,11 @@ export default function Home() {
         <button
           disabled={selected != "scissors" && selected != null}
           onClick={() => setSelected("scissors")}
-          className="h-24 w-24 disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100"
+          className={`h-24 w-24 border-2  disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100 ${
+            primaryWinning == 1 && selected == "scissors"
+              ? "border-green-500"
+              : "border-transparent"
+          }`}
         >
           <img
             src="https://cdn-icons-png.flaticon.com/512/3153/3153026.png"

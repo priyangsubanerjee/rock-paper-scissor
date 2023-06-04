@@ -20,22 +20,41 @@ export default function Home() {
       return;
     } else if (computer == "rock" && selected == "paper") {
       setMyScore(myscore + 1);
+      setTimeout(() => {
+        setSelected(null);
+        setTurn(1);
+      }, 1000);
     } else if (computer == "rock" && selected == "scissors") {
       setCompScore(compscore + 1);
+      setTimeout(() => {
+        setSelected(null);
+        setTurn(1);
+      }, 1000);
     } else if (computer == "paper" && selected == "rock") {
       setCompScore(compscore + 1);
+      setTimeout(() => {
+        setSelected(null);
+        setTurn(1);
+      }, 1000);
     } else if (computer == "paper" && selected == "scissors") {
       setMyScore(myscore + 1);
+      setTimeout(() => {
+        setSelected(null);
+        setTurn(1);
+      }, 1000);
     } else if (computer == "scissors" && selected == "rock") {
       setMyScore(myscore + 1);
+      setTimeout(() => {
+        setSelected(null);
+        setTurn(1);
+      }, 1000);
     } else if (computer == "scissors" && selected == "paper") {
       setCompScore(compscore + 1);
+      setTimeout(() => {
+        setSelected(null);
+        setTurn(1);
+      }, 1000);
     }
-
-    setTimeout(() => {
-      setSelected(null);
-      setTurn(1);
-    }, 1000);
   };
 
   useEffect(() => {
@@ -51,7 +70,6 @@ export default function Home() {
           let option = images[random];
           setImage(images[random]);
           decide(option);
-
           return;
         }
         timer++;
@@ -77,7 +95,7 @@ export default function Home() {
               Computer: {compscore} --- You: {myscore}
             </p>
           </div>
-          <h1 className="text-center font-bold text-5xl font-jost text-zinc-800">
+          <h1 className="text-center font-bold text-4xl font-jost text-zinc-800">
             {turn == 0 ? "Computers" : "Your"} turn
           </h1>
           <p className="font-jost text-center text-zinc-600 mt-4">
@@ -92,10 +110,10 @@ export default function Home() {
               <img
                 src={
                   image == "rock"
-                    ? "https://cdn-icons-png.flaticon.com/512/4405/4405457.png"
+                    ? "/rock.png"
                     : image == "paper"
-                    ? "https://cdn-icons-png.flaticon.com/512/3153/3153026.png"
-                    : "https://cdn-icons-png.flaticon.com/512/7083/7083532.png"
+                    ? "/paper.png"
+                    : "/scissor.png"
                 }
                 alt=""
                 className="h-10"
@@ -119,8 +137,10 @@ export default function Home() {
       </div>
       <div className="flex mt-2 items-center justify-center space-x-6">
         <button
-          disabled={selected != "scissors" && selected != null}
-          onClick={() => setSelected("scissors")}
+          disabled={selected != "paper" && selected != null}
+          onClick={() => {
+            setSelected("paper");
+          }}
           className="h-24 w-24 disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100"
         >
           <img
@@ -130,8 +150,8 @@ export default function Home() {
           />
         </button>
         <button
-          disabled={selected != "paper" && selected != null}
-          onClick={() => setSelected("paper")}
+          disabled={selected != "scissors" && selected != null}
+          onClick={() => setSelected("scissors")}
           className="h-24 w-24 disabled:opacity-50 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100"
         >
           <img

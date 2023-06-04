@@ -85,7 +85,6 @@ export default function Home() {
       });
       setSelected(null);
       setTurn(1);
-      setImage(null);
     }, 1500);
   };
 
@@ -134,9 +133,9 @@ export default function Home() {
           </p>
           <div className="mt-10 flex justify-center">
             <button
-              disabled={turn == 1 || image == null}
+              disabled={turn == 1}
               onClick={() => setSelected("rock")}
-              className={`h-24 w-24 border-2 disabled:opacity-0 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-500  ${
+              className={`h-24 w-24 border-2 disabled:scale-0 disabled:shadow-none bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-500  ${
                 state.computer == 1
                   ? "border-green-500"
                   : state.computer == 0
@@ -151,9 +150,7 @@ export default function Home() {
                     ? "/rock.png"
                     : image == "paper"
                     ? "/paper.png"
-                    : image == "scissors"
-                    ? "/scissor.png"
-                    : ""
+                    : "/scissor.png"
                 }
                 alt=""
               />

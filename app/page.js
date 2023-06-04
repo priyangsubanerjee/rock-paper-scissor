@@ -58,7 +58,7 @@ export default function Home() {
         setImage(images[start]);
         if (start == 2) start = 0;
         else start++;
-      }, 200);
+      }, 100);
     }
   }, [turn]);
 
@@ -78,7 +78,7 @@ export default function Home() {
             </p>
           </div>
           <h1 className="text-center font-bold text-5xl font-jost text-zinc-800">
-            {turn == 0 ? "Computer" : "Your"} turn
+            {turn == 0 ? "Computers" : "Your"} turn
           </h1>
           <p className="font-jost text-center text-zinc-600 mt-4">
             You can select in the next turn.

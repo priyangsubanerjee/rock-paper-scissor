@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="theme-color" content="rgb(254 249 195)" />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className} overflow-hidden`}>{children}</body>
     </html>
   );
 }

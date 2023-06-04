@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="fixed flex flex-col justify-end inset-0 h-full w-full bg-yellow-100 pb-12">
+    <main className="fixed flex flex-col justify-end inset-0 h-full w-full bg-gradient-to-b from-yellow-100/80 to-transparent pb-12">
       <div className="flex justify-center">
         <button className="h-24 w-24 bg-white flex items-center justify-center shadow-xl rounded-full shadow-yellow-300/50 active:shadow-none active:translate-y-1 transition-all duration-100">
           <img

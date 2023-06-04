@@ -146,15 +146,19 @@ export default function Home() {
                   : "border-transparent"
               } `}
             >
-              {image == "rock" ? (
-                <img src="/rock.png" alt="" />
-              ) : image == "paper" ? (
-                <img src="/paper.png" alt="" />
-              ) : image == "scissors" ? (
-                <img src="/scissor.png" alt="" />
-              ) : (
-                <img src="/7o86qd.gif" className="w-12" alt="" />
-              )}
+              <img
+                className="h-10"
+                src={
+                  image == "rock"
+                    ? "/rock.png"
+                    : image == "paper"
+                    ? "/paper.png"
+                    : image == "scissors"
+                    ? "/scissor.png"
+                    : "/7o86qd.gif"
+                }
+                alt=""
+              />
             </button>
           </div>
         </div>

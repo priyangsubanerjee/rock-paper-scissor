@@ -151,7 +151,9 @@ export default function Home() {
                     ? "/rock.png"
                     : image == "paper"
                     ? "/paper.png"
-                    : "/scissor.png"
+                    : image == "scissors"
+                    ? "/scissors.png"
+                    : "https://www.trafigura.com/media/1670/footer-bg.png"
                 }
                 alt=""
               />

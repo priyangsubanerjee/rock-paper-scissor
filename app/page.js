@@ -24,11 +24,11 @@ export default function Home() {
   ]);
   return (
     <main className="fixed inset-0 h-full w-full bg-gradient-to-b from-yellow-100 to-transparent">
-      <div className="fixed bottom-12 inset-x-0 flex justify-center items-center">
+      <div className="fixed bottom-12 inset-x-0 space-x-5 flex justify-center items-center">
         {options.map((option) => (
           <button
             key={option.name}
-            className="bg-white rounded-full h-20 w-20 p-4 m-4 shadow-md flex items-center justify-center"
+            className="bg-white rounded-full h-24 w-24  shadow-xl shadow-yellow-100 flex items-center justify-center"
           >
             <Image alt={option.name} src={option.img} width={40} height={40} />
           </button>

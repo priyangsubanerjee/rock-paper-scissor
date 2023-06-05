@@ -27,11 +27,29 @@ export default function Home() {
       <div className="h-1/2 relative border-b border-yellow-700/30">
         <div className="absolute top-5 inset-x-0">
           <div className="flex justify-center items-center space-x-3">
-            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
-            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+            <button className="h-24 w-24 flex items-center justify-center bg-white rounded-full shadow-lg shadow-yellow-200">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/7083/7083532.png"
+                className="h-10"
+                alt=""
+              />
+            </button>
+            <button className="h-24 w-24 flex items-center justify-center bg-white rounded-full shadow-lg shadow-yellow-200">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3153/3153026.png"
+                className="h-10"
+                alt=""
+              />
+            </button>
           </div>
           <div className="flex justify-center items-center">
-            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+            <button className="h-24 w-24 flex items-center justify-center bg-white rounded-full shadow-lg shadow-yellow-200">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4405/4405457.png"
+                className="h-10"
+                alt=""
+              />
+            </button>
           </div>
         </div>
         <div className="absolute bottom-0 translate-y-1/2 bg-red-500/50 w-full h-12 inset-x-0"></div>
@@ -39,11 +57,29 @@ export default function Home() {
       <div className="h-1/2 relative">
         <div className="absolute bottom-5 inset-x-0">
           <div className="flex justify-center items-center">
-            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+            <button className="h-24 w-24 flex items-center justify-center bg-white rounded-full shadow-lg shadow-yellow-200">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/4405/4405457.png"
+                className="h-10"
+                alt=""
+              />
+            </button>
           </div>
           <div className="flex justify-center items-center space-x-3">
-            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
-            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+            <button className="h-24 w-24 flex items-center justify-center bg-white rounded-full shadow-lg shadow-yellow-200">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/7083/7083532.png"
+                className="h-10"
+                alt=""
+              />
+            </button>
+            <button className="h-24 w-24 flex items-center justify-center bg-white rounded-full shadow-lg shadow-yellow-200">
+              <img
+                src="https://cdn-icons-png.flaticon.com/512/3153/3153026.png"
+                className="h-10"
+                alt=""
+              />
+            </button>
           </div>
         </div>
       </div>

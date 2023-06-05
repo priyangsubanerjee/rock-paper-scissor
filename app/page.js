@@ -185,7 +185,7 @@ export default function Home() {
         </div>
 
         <div>
-          player: {score.player} | computer: {score.computer}
+          you: {score.player} | computer: {score.computer}
         </div>
         <div className="absolute flex items-center justify-center bottom-0 translate-y-1/2 w-full h-12 inset-x-0">
           <span className="bg-yellow-100 px-6 font-jost">

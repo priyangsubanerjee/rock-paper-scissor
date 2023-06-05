@@ -195,7 +195,7 @@ export default function Home() {
               ? "You lose"
               : currState.player === 0 && currState.computer === 0
               ? "Draw"
-              : "Hold your breath 😍"}
+              : "Tap an option below to start"}
           </span>
         </div>
       </div>

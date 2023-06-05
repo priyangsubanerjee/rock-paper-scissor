@@ -188,7 +188,7 @@ export default function Home() {
           player: {score.player} | computer: {score.computer}
         </div>
         <div className="absolute flex items-center justify-center bottom-0 translate-y-1/2 w-full h-12 inset-x-0">
-          <span className="bg-yellow-100 px-6">
+          <span className="bg-yellow-100 px-6 font-jost">
             {currState.player === 1
               ? "You win"
               : currState.computer === 1

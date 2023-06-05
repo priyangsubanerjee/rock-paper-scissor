@@ -32,15 +32,26 @@ export default function Home() {
     player: null,
     computer: null,
   });
+  const [draws, setDraws] = useState(0);
 
   const [score, setScore] = useState({
     player: 0,
     computer: 0,
   });
 
+  useEffect(() => {
+    if (draws >= 3) {
+      setScore((prev) => ({
+        ...prev,
+        player: prev.player + 1,
+      }));
+    }
+  }, [draws]);
+
   const decide = (computersChoice) => {
     console.log(computersChoice, usersChoice);
     if (computersChoice === usersChoice) {
+      setDraws((prev) => prev + 1);
       setCurrState({
         player: 0,
         computer: 0,
@@ -65,6 +76,7 @@ export default function Home() {
       });
     }
     setTimeout(() => {
+      setDraws(0);
       setUsersChoice(null);
       setComputersChoice(null);
       setCounter(5);

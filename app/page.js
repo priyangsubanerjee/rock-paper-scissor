@@ -23,16 +23,29 @@ export default function Home() {
     },
   ]);
   return (
-    <main className="fixed inset-0 h-full w-full bg-gradient-to-b from-yellow-100 to-transparent">
-      <div className="fixed bottom-12 inset-x-0 space-x-5 flex justify-center items-center">
-        {options.map((option) => (
-          <button
-            key={option.name}
-            className="bg-white rounded-full h-24 w-24  shadow-xl shadow-yellow-100 flex items-center justify-center"
-          >
-            <Image alt={option.name} src={option.img} width={40} height={40} />
-          </button>
-        ))}
+    <main className="fixed inset-0 h-full w-full bg-gradient-to-b from-yellow-100 to-yellow-100">
+      <div className="h-1/2 relative border-b border-yellow-700/30">
+        <div className="absolute top-5 inset-x-0">
+          <div className="flex justify-center items-center space-x-3">
+            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+          </div>
+          <div className="flex justify-center items-center">
+            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+          </div>
+        </div>
+        <div className="absolute bottom-0 translate-y-1/2 bg-red-500/50 w-full h-12 inset-x-0"></div>
+      </div>
+      <div className="h-1/2 relative">
+        <div className="absolute bottom-5 inset-x-0">
+          <div className="flex justify-center items-center">
+            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+          </div>
+          <div className="flex justify-center items-center space-x-3">
+            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+            <button className="h-24 w-24 bg-white rounded-full shadow-lg shadow-yellow-200"></button>
+          </div>
+        </div>
       </div>
     </main>
   );
